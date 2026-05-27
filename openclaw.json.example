@@ -1,0 +1,397 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "sandbox": {
+        "browser": {
+          "enabled": false
+        }
+      },
+      "model": {
+        "primary": "deepseek/deepseek-v4-flash",
+        "fallbacks": [
+          "deepseek/deepseek-v4-pro"
+        ]
+      },
+      "userTimezone": "Asia/Shanghai",
+      "timeFormat": "24",
+      "timeoutSeconds": 3600,
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 40000,
+      "thinkingDefault": "high",
+      "compaction": {
+        "mode": "safeguard",
+        "recentTurnsPreserve": 5,
+        "keepRecentTokens": 8000,
+        "reserveTokens": 4000,
+        "notifyUser": true
+      },
+      "memorySearch": {
+        "enabled": true,
+        "store": {
+          "vector": {
+            "extensionPath": "/root/.local/share/pnpm/global/5/.pnpm/sqlite-vec-linux-x64@0.1.9/node_modules/sqlite-vec-linux-x64/vec0.so"
+          }
+        }
+      },
+      "heartbeat": {
+        "every": "2h",
+        "activeHours": {
+          "start": "08:00",
+          "end": "23:00"
+        }
+      },
+      "models": {
+        "deepseek/deepseek-v4-flash": {
+          "alias": "Flash",
+          "params": {
+            "temperature": 0.1,
+            "max_tokens": 4096
+          }
+        },
+        "deepseek/deepseek-v4-pro": {
+          "alias": "Pro",
+          "params": {
+            "temperature": 0.3,
+            "max_tokens": 16384
+          }
+        }
+      },
+      "params": {
+        "temperature": 0.2,
+        "top_p": 0.9,
+        "frequency_penalty": 0.5
+      },
+      "reasoningDefault": "on",
+      "verboseDefault": "off"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "__REPLACE_ME__"
+    },
+    "port": 12643,
+    "bind": "lan",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://124.221.148.237:12643"
+      ],
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true,
+      "basePath": "/9enbuq"
+    }
+  },
+  "session": {
+    "dmScope": "main",
+    "maintenance": {
+      "pruneAfter": "14d",
+      "maxEntries": 500
+    },
+    "reset": {
+      "mode": "daily",
+      "atHour": 4,
+      "idleMinutes": 60
+    }
+  },
+  "tools": {
+    "profile": "full"
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "tencent-cloud-cos": {
+        "enabled": false
+      },
+      "tencent-docs": {
+        "enabled": true
+      },
+      "tencent-meeting-mcp": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "gh-issues": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "node-connect": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "weather": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "Skywork Search": {
+        "enabled": false
+      },
+      "1password": {
+        "enabled": false
+      },
+      "ima-skill": {
+        "apiKey": "__REPLACE_ME__",
+        "env": {
+          "IMA_OPENAPI_APIKEY": "kXEqNIlLVLICXRi7WS81PxIFvA2JmO1Z22KKSYhDDt2MRhEytsyH4naRrIlcUJ6Ds3lB7oFc/g=="
+        }
+      },
+      "ima": {
+        "apiKey": "__REPLACE_ME__",
+        "env": {
+          "IMA_OPENAPI_APIKEY": "kXEqNIlLVLICXRi7WS81PxIFvA2JmO1Z22KKSYhDDt2MRhEytsyH4naRrIlcUJ6Ds3lB7oFc/g=="
+        }
+      },
+      "kdocs": {
+        "env": {
+          "KINGSOFT_DOCS_TOKEN": "apik:0f2jnu8sdobro65a.enjntvceelv0f5y08a9evul67tl3roxj"
+        }
+      },
+      "ppt-generator": {
+        "enabled": false
+      },
+      "wps": {
+        "enabled": false
+      },
+      "web-search-free": {
+        "enabled": false
+      },
+      "baoyu-skills": {
+        "enabled": false
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-05-25T06:33:47.124Z",
+    "lastRunVersion": "2026.5.7",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.5.7",
+    "lastTouchedAt": "2026-05-25T07:47:32.722Z"
+  },
+  "messages": {
+    "groupChat": {
+      "visibleReplies": "automatic"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "memory-tencentdb": {
+        "enabled": true,
+        "hooks": {
+          "allowConversationAccess": true
+        }
+      },
+      "ddingtalk": {
+        "enabled": false
+      },
+      "openclaw-plugin-yuanbao": {
+        "enabled": false
+      },
+      "openclaw-weixin": {
+        "enabled": true
+      },
+      "lightclawbot": {
+        "enabled": false
+      },
+      "wecom-openclaw-plugin": {
+        "enabled": false
+      },
+      "feishu": {
+        "enabled": false
+      },
+      "qqbot": {
+        "enabled": false
+      },
+      "browser": {
+        "enabled": true
+      },
+      "deepseek": {
+        "enabled": true
+      },
+      "tokenjuice": {
+        "enabled": true
+      }
+    }
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/root/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome",
+    "noSandbox": true,
+    "defaultProfile": "user",
+    "profiles": {
+      "user": {
+        "cdpUrl": "http://localhost:9222",
+        "driver": "existing-session",
+        "attachOnly": true,
+        "color": "#4285F4",
+        "userDataDir": "/root/.openclaw/browser-existing-session"
+      }
+    },
+    "ssrfPolicy": {
+      "dangerouslyAllowPrivateNetwork": true
+    }
+  },
+  "models": {
+    "providers": {
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKey": "__REPLACE_ME__",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-v4-flash",
+            "name": "DeepSeek V4 Flash"
+          },
+          {
+            "id": "deepseek-v4-pro",
+            "name": "DeepSeek V4 Pro"
+          }
+        ]
+      }
+    },
+    "mode": "merge"
+  },
+  "channels": {
+    "openclaw-weixin": {
+      "accounts": {}
+    }
+  },
+  "mcp": {
+    "servers": {}
+  },
+  "commands": {
+    "ownerAllowFrom": [
+      "openclaw-weixin:o9cq801kVvi1iitfqT5wFsSqEz8o@im.wechat"
+    ]
+  }
+}
