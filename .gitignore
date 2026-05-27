@@ -1,0 +1,9 @@
+# No binaries or build artifacts
+*.pyc
+__pycache__
+node_modules/
+.pnpm/
+.env
+temp/
+media/
+projects/
