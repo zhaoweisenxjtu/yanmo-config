@@ -3,7 +3,7 @@
 ## 金山文档上传规则（硬性）
 
 ### 上传流程
-1. 搜索：`kdocs-cli drive search-files keyword="<文件名>" parent_id=sGw3X9j8N1Mj3aCkCeaCrx3mtgVfzkjqe`
+1. 搜索：`kdocs-cli drive search-files keyword="<文件名>" parent_id=`
 2. 有结果 → 提取 file_id 覆盖更新；无结果 → 新建上传
 3. 获取链接并返回用户
 
